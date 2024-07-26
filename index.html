@@ -1,0 +1,47 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyAuth Sample App</title>
+</head>
+<body>
+    <h1>EasyAuth Sample App</h1>
+    <button id="getData">Get Protected Data</button>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('getData').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/api/data', {
+                    headers: {
+                        'X-MS-TOKEN-AAD-ACCESS-TOKEN': '<%=  token.access_token %>'
+                    }
+                });
+                const data = await response.json();
+                document.getElementById('result').textContent = JSON.stringify(data);
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('result').textContent = 'Error fetching data';
+            }
+        });
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure EasyAuth Demo</title>
+</head>
+<body>
+    <h1>Azure EasyAuth Demo</h1>
+    <button id="loginBtn">Login</button>
+    <button id="getUserInfoBtn" style="display:none;">Get User Info</button>
+    <div id="userInfo"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
